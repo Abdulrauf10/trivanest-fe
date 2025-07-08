@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Trivanest Frontend — Web App for Online Psychological Consultation Platform
 
-## Getting Started
+Welcome to the frontend of Trivanest, a modern online consultation platform built to connect users with professional psychologists—safely, efficiently, and comfortably from home.
 
-First, run the development server:
+“Mental wellness deserves convenience, security, and empathy — Trivanest delivers that with thoughtful tech.”
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 💭 Problem Statement
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+How might we create an online experience where individuals can easily schedule, confirm, and attend private therapy sessions—without friction?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Solution Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Trivanest was developed to simplify mental health access by solving key issues:
 
-## Learn More
+Long wait times for appointments
 
-To learn more about Next.js, take a look at the following resources:
+Difficult registration or onboarding processes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Lack of clear session confirmations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💡 Design Thinking in Action
 
-## Deploy on Vercel
+1. Empathize
+   Interviews with potential users and psychologists revealed frustration with traditional appointment systems and unclear communication.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Define
+   Users need a frictionless onboarding flow, reliable meeting confirmations, and a system they can trust with personal data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Ideate
+   Architect a clean, modular backend system to handle users, scheduling, email automation, and secure data management.
+
+4. Prototype
+   Built a backend using NestJS (a progressive Node.js framework).
+
+Integrated with email services to confirm sessions.
+
+Structured with RESTful APIs to support frontend integrations.
+
+## ⚙️ Tech Stack
+
+| Tech/Tool                                     | Role                                 |
+| --------------------------------------------- | ------------------------------------ |
+| [Next JS]                                     | Frontend framework.                  |
+| [TypeScript](https://www.typescriptlang.org/) | Type-safe coding for maintainability |
+
+### Install dependencies
+
+npm install
