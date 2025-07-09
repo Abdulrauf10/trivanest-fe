@@ -7,3 +7,11 @@ export const AUTH = {
   USERS: `${BASE_URL}/${VERSION}/users`,
   ME: `${BASE_URL}/${VERSION}/auth/me`,
 };
+
+export const APPOINTMENT_API = {
+  APPOINTMENT: `${BASE_URL}/${VERSION}/appointment`,
+};
+
+export const DOCTOR_API = {
+  DOCTOR: `${BASE_URL}/${VERSION}/doctor`,
+};

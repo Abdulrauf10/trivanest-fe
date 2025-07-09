@@ -18,7 +18,7 @@ async function getCookieToken() {
 
 apiRequest.interceptors.request.use(
   async (request) => {
-    const token = getCookieToken();
+    const token = await getCookieToken();
     if (token) {
       (request.headers as AxiosHeaders).set('Authorization', `Bearer ${token}`);
     }
