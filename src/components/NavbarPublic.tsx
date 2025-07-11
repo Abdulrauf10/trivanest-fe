@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
   { name: 'Services', href: '/service' },
   { name: 'Appointment', href: '/appointment' },
-  { name: 'Contact Us', href: 'https://wa.me/6285236375312' },
 ];
 
 export default function NanbarPublic() {
@@ -19,26 +18,16 @@ export default function NanbarPublic() {
 
   // Load saved active link from localStorage on component mount
   useEffect(() => {
-    const savedLink = localStorage.getItem('activeLink');
-    if (savedLink) {
-      setActiveLink(savedLink);
+    if (pathname) {
+      setActiveLink(pathname);
     }
-  }, []);
-
-  // Update localStorage when activeLink changes
-  useEffect(() => {
-    localStorage.setItem('activeLink', activeLink);
-  }, [activeLink]);
-
-  const handleClick = (href: string) => {
-    setActiveLink(href);
-  };
+  }, [pathname]);
 
   return (
     <>
-      <nav className="bg-white shadow-md p-4">
+      <nav className="bg-white shadow-md p-4 w-full fixed top-0">
         <div className="container mx-auto flex justify-between items-center">
-          <Link href={'/'} onClick={() => handleClick('/')}>
+          <Link href={'/'}>
             <Image
               src={'/home/trivanest-black.png'}
               width={100}
@@ -53,7 +42,6 @@ export default function NanbarPublic() {
               <li key={idx}>
                 <a
                   href={link.href}
-                  onClick={() => handleClick(link.href)}
                   className={`capitalize transition-colors ${
                     activeLink === link.href
                       ? 'text-[#5A189A]'
@@ -65,6 +53,14 @@ export default function NanbarPublic() {
               </li>
             ))}
           </ul>
+
+          <Link
+            href={'https://wa.me/6285236375312'}
+            target="_blank"
+            className="text-white px-3.5 py-1 rounded-2xl bg-[#FF9E00] text-[15px] hidden md:flex"
+          >
+            Contact Us
+          </Link>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -105,7 +101,6 @@ export default function NanbarPublic() {
                 <a
                   key={idx}
                   href={link.href}
-                  onClick={() => handleClick(link.href)}
                   className={`block px-4 py-2 capitalize transition-colors ${
                     activeLink === link.href
                       ? 'text-white bg-[#5A189A]'
@@ -115,6 +110,13 @@ export default function NanbarPublic() {
                   {link.name}
                 </a>
               ))}
+              <Link
+                href={'https://wa.me/6285236375312'}
+                target="_blank"
+                className="text-white px-3.5 py-1 rounded-2xl bg-[#FF9E00] text-[15px] md:hidden ml-3"
+              >
+                Contact Us
+              </Link>
             </motion.div>
           )}
         </AnimatePresence>
