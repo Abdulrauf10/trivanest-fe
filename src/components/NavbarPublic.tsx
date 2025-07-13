@@ -25,7 +25,7 @@ export default function NanbarPublic() {
 
   return (
     <>
-      <nav className="bg-white shadow-md p-4 w-full fixed top-0">
+      <nav className="bg-white shadow-md p-4 w-full fixed top-0 z-10">
         <div className="container mx-auto flex justify-between items-center">
           <Link href={'/'}>
             <Image
